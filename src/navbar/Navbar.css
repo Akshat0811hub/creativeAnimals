@@ -1,0 +1,22 @@
+
+.main-header {
+  display: flex;
+  padding: 16px;
+}
+
+.header ul {
+  display: flex;
+  gap: 50px;
+  padding: 5px;
+  list-style: none;
+  margin-left: 550px; 
+  font-size: 23px;
+  align-items: center;
+}
+.header ul li a {
+  text-decoration: none; 
+  justify-content: right;
+  color: black;
+  font-weight: 700;
+}
+
