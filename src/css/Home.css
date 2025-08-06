@@ -1,49 +1,89 @@
+/* Main hero wrapper */
 .hero-section {
-  height: 100vh;
-  width: 100%;
+  height: auto;
+  width: 90%;
   padding: 15px;
-  overflow: hidden; /* ✅ Only keep this to prevent horizontal scroll */
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* "Creative Animal" heading */
 .main-heading h1 {
-  font-size: 100px;
+  font-size: 150px;
   color: gray;
+  margin-top: -10px;
+  margin-left: -530px;
+  /* text-align: center; */
+  /* margin-bottom: 20px; */
+  position: absolute;
 }
 
-.main {
-  border-radius: 20px;
-  width: fit-content;
-  padding: 30px 50px;
-  margin-top: 50px;
-}
+/* Yellow rounded container with curves */
 .sub-heading {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  margin-top: 50px;
+  margin-top: 95px;              /* 🔼 shifted a bit up */
+  padding: 60px 40px;
+  background-color: yellow;
+  border-radius: 50px;
+  
+  width: 90%;
+  max-width: 1350px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
+/* SVG that contains "TURNING" and "IDEAS" */
 .circular-text {
+  margin-top: -20px;              /* ⬇️ space below border before arcs */
   width: 100%;
   height: auto;
 }
 
+/* Info block: heading + paragraph */
 .brand-info {
+  
   text-align: center;
-  max-width: 600px;
-  margin-top: 30px;
+  max-width: 700px;
+  margin-top: -250px;
 }
 
 .brand-info h2 {
-  font-size: 24px;
-  font-weight: 700;
-  color: white;
-  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 800;
+  color: black;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .brand-info p {
-  font-size: 16px;
-  color: white;
-  line-height: 1.6;
+  font-size: 18px;
+  color: black;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+
+.circular-text:last-of-type {
+  margin-top: -300px; /* 👈 Adjust this value to control vertical position of "IDEAS" */
+}
+
+
+@keyframes rotateText {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-on-scroll {
+  animation: rotateText 10s linear infinite;
+  transform-origin: center;
 }
